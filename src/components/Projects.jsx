@@ -22,7 +22,7 @@ export default function Projects() {
   return (
     <div>
       <div className="flex justify-center mt-10">
-        <div className="text-4xl mb-5">Projects</div>
+        <div className="text-4xl">Projects</div>
       </div>
       <div>
         {proj.map((proj, index) => (

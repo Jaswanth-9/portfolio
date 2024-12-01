@@ -1,3 +1,4 @@
+import Experience from "./components/Experience";
 import Main from "./components/Main";
 import NavBar from "./components/NavBar";
 import Projects from "./components/Projects";
@@ -14,6 +15,7 @@ export default function App() {
         <Main />
         <Technologies />
         <Projects />
+        <Experience />
       </div>
     </div>
   );
