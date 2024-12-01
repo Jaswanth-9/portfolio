@@ -1,5 +1,6 @@
 import Main from "./components/Main";
 import NavBar from "./components/NavBar";
+import Technologies from "./components/Technologies";
 
 export default function App() {
   return (
@@ -10,6 +11,7 @@ export default function App() {
       <div className="px-8">
         <NavBar />
         <Main />
+        <Technologies />
       </div>
     </div>
   );
