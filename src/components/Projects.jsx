@@ -1,3 +1,5 @@
+import { motion } from "framer-motion";
+
 export default function Projects() {
   const proj = [
     {
@@ -22,15 +24,40 @@ export default function Projects() {
   return (
     <div>
       <div className="flex justify-center mt-10">
-        <div className="text-4xl">Projects</div>
+        <motion.div
+          className="text-4xl"
+          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: -20 }}
+          transition={{ duration: 1.5 }}
+        >
+          Projects
+        </motion.div>
       </div>
       <div>
         {proj.map((proj, index) => (
           <div key={index}>
-            <div className="text-xl font-bold mt-4">{proj.title} </div>
-            <p className="text-stone-400">{proj.description}</p>
+            <motion.div
+              className="text-xl font-bold mt-4"
+              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, x: -20 }}
+              transition={{ duration: 2 }}
+            >
+              {proj.title}{" "}
+            </motion.div>
+            <motion.p className="text-stone-400"
+            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, x: 20 }}
+            transition={{ duration: 2 }}>{proj.description}</motion.p>
             {proj.technology.map((tech, index) => (
-                <span key = {index} className = "bg-stone-900 text-stone-300 text-sm mr-2 mt-8 p-1 font-medium rounded">{tech}</span>
+              <motion.span
+                key={index}
+                className="bg-stone-900 text-stone-300 text-sm mr-2 mt-8 p-1 font-medium rounded"
+                whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, x: -20 }}
+              transition={{ duration: 2 }}
+              >
+                {tech}
+              </motion.span>
             ))}
           </div>
         ))}
